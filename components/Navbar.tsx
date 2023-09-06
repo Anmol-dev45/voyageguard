@@ -7,7 +7,7 @@ const Navbar = () => {
     <header>
       <div className="container mx-auto flex justify-between items-center">
         <div className='font-sans'>
-          <Image src={"/Logo.svg"} width={255} height={80} alt='Image of logo' />
+          <Image src={"/Logo.svg"} width={200} height={80} alt='Image of logo' />
         </div>
         <nav className='flex items-center gap-16'>
           {
