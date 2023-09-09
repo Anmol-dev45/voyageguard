@@ -20,9 +20,9 @@ export const destination = defineType({
         }),
         defineField({
             name: "images",
-            title: "Images",
+            title: "Image Url",
             type: "array",
-            of: [{ type: "image" }]
+            of: [{ type: "url" }]
         }),
         defineField({
             name:"tags",

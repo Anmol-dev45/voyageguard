@@ -1,6 +1,8 @@
 import { FEATURE } from '@/constant'
 import React from 'react'
-import Card from './Card'
+import Card from './utils/Card'
+import Container from './utils/Container';
+import Button from './utils/Button';
 
 const KeyFeature = () => {
     const keyFeature = FEATURE
@@ -9,9 +11,10 @@ const KeyFeature = () => {
 
     return (
         <section className='mt-12'>
-            <div className="main-container">
-<h2 className='heading'>Our key Feature</h2>
+            <Container>
+                <h2 className='heading'>Our key Feature</h2>
                 <div className='flex justify-between gap-y-10 flex-wrap'>
+
 
                     {
                         keyFeature && (
@@ -19,7 +22,10 @@ const KeyFeature = () => {
                         )
                     }
                 </div>
-            </div>
+                <div className='mb-12'>
+                    <Button variant='withIcon'>see more</Button>
+                </div>
+            </Container>
         </section>
     )
 }

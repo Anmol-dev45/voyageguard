@@ -18,8 +18,8 @@ export const food = defineType({
         }),
         defineField({
             name: "image",
-            title: "Image",
-            type: "image"
+            title: "Image Url",
+            type: "url"
         })
     ]
 });

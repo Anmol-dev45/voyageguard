@@ -20,9 +20,8 @@ export const hotel = defineType({
         }),
         defineField({
             name: "image",
-            title: "Image",
-            type: "array",
-            of: [{ type: "image" }]
+            title: "Image Url",
+            type: "url",
         }),
         defineField({
             name: "location",

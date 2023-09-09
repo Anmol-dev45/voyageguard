@@ -7,12 +7,6 @@
 
 
 @layer base {
-    .main-container {
-        @apply container mx-auto px-4;
-    }
-    .btn {
-        @apply text-black font-semibold border-black border-2 rounded-full px-10 py-3 bg-white hover:scale-105 hover:underline capitalize transition-all duration-300 ease-linear;
-    }
     .heading {
         @apply text-3xl md:text-5xl font-bold text-black text-left mb-10 font-exo;
     }
