@@ -9,13 +9,16 @@ const KeyFeature = () => {
 
     return (
         <section className='mt-12'>
-            <div className="container mx-auto flex justify-between gap-y-10 flex-wrap">
-                
-                {
-                    keyFeature && (
-                        keyFeature.map(feature => <Card item={feature} />)
-                    )
-                }
+            <div className="main-container">
+<h2 className='heading'>Our key Feature</h2>
+                <div className='flex justify-between gap-y-10 flex-wrap'>
+
+                    {
+                        keyFeature && (
+                            keyFeature.map(feature => <Card item={feature} />)
+                        )
+                    }
+                </div>
             </div>
         </section>
     )

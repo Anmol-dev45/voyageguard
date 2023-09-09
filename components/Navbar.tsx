@@ -1,11 +1,16 @@
+"use client"
 import React from 'react'
 import Image from 'next/image'
 import { NAV_ITEM } from '@/constant'
 import Link from 'next/link'
+import {usePathname} from "next/navigation"
 const Navbar = () => {
+  const pathname = usePathname()
+  if(pathname.startsWith("/studio")) return null
+
   return (
     <header>
-      <div className="container mx-auto flex justify-between items-center">
+      <div className="main-container flex justify-between items-center">
         <div className='font-sans'>
           <Image src={"/Logo.svg"} width={200} height={80} alt='Image of logo' />
         </div>
