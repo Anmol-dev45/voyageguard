@@ -14,7 +14,7 @@ const Hero = () => {
           <div className="flex flex-col gap-8 items-center justify-center mb-12">
             <h1 className='text-white font-black font-exo text-7xl mt-56 text-center leading-[1.3em]'>Explore Nepal with <br />VoyageGuard</h1>
             <a href="">
-              <Button>Start your journey</Button>
+              <Button variant='default'>Start your journey</Button>
             </a>
           </div>
         </Container>
@@ -25,6 +25,3 @@ const Hero = () => {
 }
 
 export default Hero
-
-
-//<span className='ml-2'>&#8594;</span>

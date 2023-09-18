@@ -14,8 +14,6 @@ const KeyFeature = () => {
             <Container>
                 <h2 className='heading'>Our key Feature</h2>
                 <div className='flex justify-between gap-y-10 flex-wrap'>
-
-
                     {
                         keyFeature && (
                             keyFeature.map(feature => <Card item={feature} />)
@@ -23,7 +21,7 @@ const KeyFeature = () => {
                     }
                 </div>
                 <div className='mb-12'>
-                    <Button variant='withIcon'>see more</Button>
+                    <Button variant='with-icon'>see more</Button>
                 </div>
             </Container>
         </section>
