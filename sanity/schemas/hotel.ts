@@ -11,6 +11,11 @@ export const hotel = defineType({
             type: "string"
         }),
         defineField({
+            name: "description",
+            title: "Description",
+            type: "text"
+        }),
+        defineField({
             name: "slug",
             title: "Slug",
             type: "slug",
@@ -19,14 +24,11 @@ export const hotel = defineType({
             }
         }),
         defineField({
-            name: "image",
-            title: "Image Url",
-            type: "url",
+            name: "images",
+            title: "Images",
+            type: "array",
+            of: [{ type: "image", options: { hotspot: true } }]
         }),
-        defineField({
-            name: "location",
-            title: "Location",
-            type: "geopoint"
-        })
+      
     ]
 });

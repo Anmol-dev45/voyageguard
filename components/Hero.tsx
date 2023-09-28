@@ -2,6 +2,7 @@ import React from 'react'
 import KeyFeature from './KeyFeature'
 import Container from './utils/Container'
 import Button from './utils/Button'
+import TopDestination from './TopDestination'
 
 const Hero = () => {
   return (
@@ -20,6 +21,9 @@ const Hero = () => {
         </Container>
       </section>
       <KeyFeature />
+      <Container>
+        <TopDestination />
+      </Container>
     </>
   )
 }

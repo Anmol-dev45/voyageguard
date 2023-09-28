@@ -11,6 +11,11 @@ export const destination = defineType({
             type: "string"
         }),
         defineField({
+            name: "description",
+            title: "Description",
+            type: "text"
+        }),
+        defineField({
             name: "slug",
             title: "Slug",
             type: "slug",
@@ -20,20 +25,27 @@ export const destination = defineType({
         }),
         defineField({
             name: "images",
-            title: "Image Url",
+            title: "Images",
             type: "array",
-            of: [{ type: "url" }]
+            of: [{ type: "image", options: { hotspot: true } }],
+
         }),
         defineField({
-            name:"tags",
-            title:"Tags",
-            type:"reference",
-            to:[{type:"category"}]
+            name: "topTen",
+            title: "Is It Top Ten",
+            type: "boolean"
         }),
         defineField({
-            name: "location",
-            title: "Location",
-            type: "geopoint"
-        })
+            name: "hotels",
+            title: "Hotels",
+            type: "array",
+            of: [{ type: "reference", to: [{ type: "hotel" }] }]
+        }),
+        defineField({
+            name: "tags",
+            title: "Tags",
+            type: "reference",
+            to: [{ type: "category" }]
+        }),
     ]
 })
