@@ -9,9 +9,7 @@ const page = () => {
     <>
       <Hero />
       <KeyFeature />
-      <Container>
-        <TopDestination />
-      </Container>
+      <TopDestination />
     </>
   );
 };

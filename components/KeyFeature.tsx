@@ -14,15 +14,16 @@ const KeyFeature = () => {
   );
 
   return (
-    <section className="mt-12">
+    <section className="my-12">
       <Container>
         <h2 className="heading">Our key Feature</h2>
-        <div className="flex justify-between gap-y-10 flex-wrap">
-          {keyFeature && keyFeature.map((feature) => <Card item={feature} />)}
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-12">
+          {keyFeature &&
+            keyFeature.map((feature) => (
+              <Card item={feature} key={feature.name} />
+            ))}
         </div>
-        <div className="mb-12">
-          <Button variant="with-icon">see more</Button>
-        </div>
+       
       </Container>
     </section>
   );
