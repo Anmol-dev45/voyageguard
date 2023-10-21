@@ -14,7 +14,7 @@ const KeyFeature = () => {
   );
 
   return (
-    <section className="my-12">
+    <section className="my-12 md:pt-32 px-4">
       <Container>
         <h2 className="heading">Our key Feature</h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-12">

@@ -19,7 +19,7 @@ const Card = ({ item }: CardProp) => (
       </h2>
     </div>
     {item.description && (
-      <p className="text-justify font-medium font-exo">{item.description}</p>
+      <p className="text-justify font-medium font-exo text-black/70 pl-4">{item.description}</p>
     )}
   </div>
 );

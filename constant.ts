@@ -8,7 +8,7 @@ export const NAV_ITEM: NavItem[] = [
 
     },
     {
-        name: "destination",
+        name: "destinations",
 
     },
     {

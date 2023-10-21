@@ -5,9 +5,8 @@ import Container from "./utils/Container";
 import Link from "next/link";
 const TopDestination = async () => {
   const destinations = await getTopDestinations();
-  console.log(destinations);
   return (
-    <section className="py-12">
+    <section className="py-12 md:pb-32 px-4">
       <Container>
         <div className="flex flex-col items-center gap-12">
           <div className="w-full">
