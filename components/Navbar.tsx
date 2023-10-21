@@ -23,7 +23,7 @@ const Navbar = () => {
             />
           </Link>
           <nav
-            className={`max-md:fixed max-md:w-4/5 max-md:h-full top-0 right-0 max-md:bg-neutral-300 z-40 max-md:pt-20 flex flex-col md:flex-row items-center gap-16 ${
+            className={`max-md:fixed max-md:w-4/5 max-md:h-full top-0 right-0 max-md:bg-neutral-300 z-40 max-md:pt-20 flex flex-col md:flex-row  max-sm:pl-32 max-md:pl-52 items-start md:items-center gap-16 ${
               isOpen ? "max-md:translate-x-0" : "max-md:translate-x-full"
             } max-md:transition-transform duration-300 `}
           >
@@ -31,7 +31,7 @@ const Navbar = () => {
               <Link
                 href={item.name !== "home" ? item.name : "/"}
                 key={_i}
-                className=" text-black font-medium hover:text-primary transition-colors duration-300 ease-in capitalize"
+                className=" body-text hover:text-primary transition-colors duration-300 ease-in capitalize"
                 onClick={() => setIsOpen(false)}
               >
                 {item.name}

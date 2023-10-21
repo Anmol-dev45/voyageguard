@@ -11,3 +11,24 @@
         @apply text-4xl xl:text-6xl font-bold text-black text-left mb-10 font-exo;
     }
 }
+
+@layer utilities {  
+    .card-wrapper {
+        @apply grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-10;
+    }
+
+    .page-wrapper {
+        @apply py-8 md:py-32 px-4 md:px-0;
+    }
+    .page-heading {
+        @apply text-4xl md:text-6xl font-semibold text-black text-left font-exo;
+    }
+    .body-text{
+        @apply text-justify text-black/70 text-lg font-sans;
+    }
+
+    .underlined-link{
+        @apply underline text-primary;
+    }
+
+}

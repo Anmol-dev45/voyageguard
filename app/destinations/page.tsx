@@ -7,9 +7,9 @@ export default async function Destination() {
   const destinations = await getDestinations();
 
   return (
-    <section className="py-8 md:py-32 px-4">
+    <section className="page-wrapper">
       <Container>
-        <h1 className="text-4xl md:text-6xl font-semibold mb-3">
+        <h1 className="page-heading mb-3">
           Top Destination In Nepal
         </h1>
         <p className="description text-lg text-black/70">
@@ -33,7 +33,7 @@ export default async function Destination() {
                 <h2 className="text-3xl md:text-4xl font-semibold mb-3 hover:underline">
                   {destination.name}
                 </h2>
-                <p className="description mb-3 text-justify text-black/70">
+                <p className="body-text mb-3">
                   Lorem ipsum dolor sit amet, consectetur adipisicing elit. In
                   reiciendis praesentium dignissimos accusamus harum aperiam ea
                   laborum sint. Eligendi nobis quam a porro! Deleniti nisi
@@ -54,16 +54,16 @@ export default async function Destination() {
                 <div className="flex justify-between mb-6">
                   <Link
                     href={`/destinations/${destination.id}`}
-                    className="underline text-primary"
+                    className="underlined-link"
                   >
                     Learn More
                   </Link>
-                  <Link href={`/guide`} className="underline text-primary">
+                  <Link href={`/guide`} className="underlined-link">
                     How can we get there?
                   </Link>
                   <Link
                     href={`/precautions/`}
-                    className="underline text-primary"
+                    className="underlined-link"
                   >
                     Precautions
                   </Link>

@@ -6,13 +6,13 @@ import Link from "next/link";
 const TopDestination = async () => {
   const destinations = await getTopDestinations();
   return (
-    <section className="py-12 md:pb-32 px-4">
+    <section className="page-wrapper">
       <Container>
         <div className="flex flex-col items-center gap-12">
           <div className="w-full">
             <h2 className="heading">Top Destination</h2>
           </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-12">
+          <div className="card-wrapper">
             {destinations.map((destination: any) => (
               <DHCard item={destination} key={destination._id} />
             ))}

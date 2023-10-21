@@ -2,14 +2,14 @@ import Container from "./utils/Container";
 import { BsFacebook, BsInstagram, BsTiktok, BsTwitter } from "react-icons/bs";
 export default function Footer() {
   return (
-    <footer className="bg-primary px-4 py-8 md:py-32">
+    <footer className="bg-primary page-wrapper text-white">
       <Container>
-        <div className="flex flex-col xl:flex-row  text-white gap-12">
+        <div className="flex flex-col xl:flex-row  gap-12">
           <div className="max-w-[480px] flex-1 md:border-r-2 border-white  md:pr-20">
-            <h1 className="font-bold text-3xl xl:text-5xl mb-3 ">
+            <h1 className="page-heading !text-white mb-3 ">
               VoyageGuard
             </h1>
-            <p className=" text-justify">
+            <p className="body-text !text-white/80">
               VoyageGuard is a reliable platform that offers tourists a safe and
               secure way to explore Nepal. Here, you can access various services
               such as assistance with taxi fares, destination guides, and
@@ -19,7 +19,7 @@ export default function Footer() {
               with confidence.
             </p>
           </div>
-          <div className="flex-1 grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-8 w-full border-b-2 border-white pb-12">
+          <div className="flex-1 grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-8 w-full border-b-2 border-white pb-12 body-text !text-white">
             <div className="flex flex-col md:pl-8">
               <h3 className="mb-3 font-semibold">Company</h3>
               <a className="mb-3">About</a>
@@ -55,9 +55,10 @@ export default function Footer() {
             </div>
           </div>
         </div>
-        <p className="text-lg text-white text-center mt-14 font-semibold">
+        <p className="body-text !text-white !text-center mt-14">
           Copyright 2023 @ VoyageGuard. All right reserved.
         </p>
+        <span className="animate-spin text-black"></span>
       </Container>
     </footer>
   );

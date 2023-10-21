@@ -30,7 +30,7 @@ const DHCard: React.FC<CardProps> = ({ item }) => {
       <h2 className="left-align text-white font-black text-5xl font-exo text-shadow absolute z-40 bottom-4 left-6">
         {item.name}
       </h2>
-      <p className="text-justify font-medium font-exo line-clamp-3">
+      <p className="body-text line-clamp-3">
         {item.description}
       </p>
     </Link>

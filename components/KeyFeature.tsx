@@ -14,10 +14,10 @@ const KeyFeature = () => {
   );
 
   return (
-    <section className="my-12 md:pt-32 px-4">
+    <section className="page-wrapper">
       <Container>
         <h2 className="heading">Our key Feature</h2>
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-12">
+        <div className="card-wrapper">
           {keyFeature &&
             keyFeature.map((feature) => (
               <Card item={feature} key={feature.name} />
