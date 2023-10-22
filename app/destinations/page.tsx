@@ -2,16 +2,21 @@ import Container from "@/components/utils/Container";
 import { getDestinations } from "@/sanity/lib/client";
 import Image from "next/image";
 import Link from "next/link";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Destinations - VoyageGuard",
+  description: "Explore Nepal with Voyageguard",
+  keywords: ["Destinations", "Nepal"],
+};
 
 export default async function Destination() {
-  const destinations = await getDestinations();
+  const destinations: Item[] = await getDestinations();
 
   return (
     <section className="page-wrapper">
       <Container>
-        <h1 className="page-heading mb-3">
-          Top Destination In Nepal
-        </h1>
+        <h1 className="page-heading mb-3">Top Destination In Nepal</h1>
         <p className="description text-lg text-black/70">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores
           minus dicta saepe?
@@ -61,10 +66,7 @@ export default async function Destination() {
                   <Link href={`/guide`} className="underlined-link">
                     How can we get there?
                   </Link>
-                  <Link
-                    href={`/precautions/`}
-                    className="underlined-link"
-                  >
+                  <Link href={`/precautions/`} className="underlined-link">
                     Precautions
                   </Link>
                 </div>

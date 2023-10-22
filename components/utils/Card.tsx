@@ -1,3 +1,6 @@
+import Image from "next/image";
+import Link from "next/link";
+
 type Item = {
   name: string;
   imgPath: string;
@@ -7,21 +10,22 @@ type CardProp = {
   item: Item;
 };
 const Card = ({ item }: CardProp) => (
-  <div>
-    <div
-      className="w-full aspect-square bg-cover flex opacity-90 p-5 rounded-3xl"
-      style={{
-        backgroundImage: `url(${item.imgPath})`,
-      }}
-    >
-      <h2 className="mt-auto left-align text-white font-black text-5xl font-exo text-shadow">
-        {item.name}
-      </h2>
-    </div>
+  <Link key={item.name} href={"/services/"} className="relative">
+    <Image
+      src={item.imgPath}
+      width={500}
+      height={500}
+      className="rounded-[3rem] w-full aspect-square object-cover  opacity-90"
+      alt={item.name}
+      loading="lazy"
+    />
+    <h2 className="card-text">
+      {item.name}
+    </h2>
     {item.description && (
-      <p className="body-text pl-4">{item.description}</p>
+      <p className="body-text line-clamp-3">{item.description}</p>
     )}
-  </div>
+  </Link>
 );
 
 export default Card;

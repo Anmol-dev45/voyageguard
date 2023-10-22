@@ -4,7 +4,7 @@ import Button from "./utils/Button";
 import Container from "./utils/Container";
 import Link from "next/link";
 const TopDestination = async () => {
-  const destinations = await getTopDestinations();
+  const destinations:Item[] = await getTopDestinations();
   return (
     <section className="page-wrapper">
       <Container>
@@ -13,7 +13,7 @@ const TopDestination = async () => {
             <h2 className="heading">Top Destination</h2>
           </div>
           <div className="card-wrapper">
-            {destinations.map((destination: any) => (
+            {destinations.map((destination) => (
               <DHCard item={destination} key={destination._id} />
             ))}
           </div>

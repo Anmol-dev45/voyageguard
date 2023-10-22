@@ -18,7 +18,8 @@ const Navbar = () => {
             <Image
               src={"/Logo.svg"}
               width={200}
-              height={80}
+              height={200}
+              className="w-[200px] h-auto"
               alt="Image of logo"
             />
           </Link>

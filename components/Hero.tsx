@@ -13,9 +13,10 @@ const Hero: React.FC<HeroProps> = () => {
         <Image
           src={backgroundImageUrl}
           alt="Background image"
-          layout="fill"
-          objectFit="cover"
-          objectPosition="center"
+          height={1000}
+          width={1200}
+          className="object-cover w-full h-full "
+          priority
         />
       </div>
       <Container>

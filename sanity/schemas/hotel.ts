@@ -16,18 +16,15 @@ export const hotel = defineType({
       type: "text",
     }),
     defineField({
-      name: "slug",
-      title: "Slug",
-      type: "slug",
-      options: {
-        source: "name",
-      },
+      name: "stars",
+      title: "Stars",
+      type: "number",
     }),
     defineField({
       name: "images",
       title: "Images",
       type: "array",
-      of: [{ type: "image", options: { hotspot: true } }],
+      of: [{ type: "url" }],
     }),
   ],
 });

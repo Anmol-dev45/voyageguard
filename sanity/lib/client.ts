@@ -14,16 +14,13 @@ export const getDestination = async (id: string) => {
     groq`*[_type == "destination" && _id == $id]{
       _id,
       name,
-      "slug": slug.current,
-      "image": images[0].asset->url,
+      images,
       description,
-      description,
-      hotels[]->{
+      hotels[]-> {
         _id,
         name,
-        "slug": slug.current,
-        "images": images[0].asset->url,
-        description
+        description,
+        images,
       }
   }`
   );
@@ -34,8 +31,7 @@ export const getDestinations = async () => {
     groq`*[_type == "destination"]{
       _id,
       name,
-      "slug": slug.current,
-      "images": images[].asset->url,
+      images,
       description
   }`
   );
@@ -45,8 +41,8 @@ export const getHotel = async (id: string) => {
     groq`*[_type == "hotel" && _id == $id]{
       _id,
       name,
-      "slug": slug.current,
-      "images": images[].asset->url,
+      description,
+      images,
   }`
   );
 };
@@ -56,8 +52,7 @@ export const getHotels = async () => {
     groq`*[_type == "hotel"]{
       _id,
       name,
-      "slug": slug.current,
-      "images": image[].asset->url,
+      images,
       description
   }`
   );
@@ -65,12 +60,11 @@ export const getHotels = async () => {
 
 export const getTopDestinations = async () => {
   return client.fetch(
-    groq`*[_type == "destination" && topTen == true]{
+    groq`*[_type == "destination" && isTopTen == true]{
       _id,
       name,
-      "slug": slug.current,
-      "image": images[0].asset->url,
-      
+      description,
+      images,
   }`
   );
 };

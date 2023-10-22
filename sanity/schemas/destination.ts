@@ -1,5 +1,4 @@
 import { defineField, defineType } from "sanity";
-
 export const destination = defineType({
   name: "destination",
   title: "Destination",
@@ -16,23 +15,20 @@ export const destination = defineType({
       type: "text",
     }),
     defineField({
-      name: "slug",
-      title: "Slug",
-      type: "slug",
-      options: {
-        source: "name",
-      },
-    }),
-    defineField({
       name: "images",
       title: "Images",
       type: "array",
-      of: [{ type: "image", options: { hotspot: true } }],
+      of: [{ type: "url" }],
     }),
     defineField({
-      name: "topTen",
+      name: "isTopTen",
       title: "Is It Top Ten",
       type: "boolean",
+    }),
+    defineField({
+      name: "price",
+      title: "Price",
+      type: "number",
     }),
     defineField({
       name: "hotels",
@@ -44,7 +40,7 @@ export const destination = defineType({
       name: "tags",
       title: "Tags",
       type: "reference",
-      to: [{ type: "category" }],
+      to: [{ type: "tag" }],
     }),
   ],
 });

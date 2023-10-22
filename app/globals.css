@@ -4,7 +4,9 @@
 @tailwind components;
 @tailwind utilities;
 
-
+.card-text {
+    text-shadow: 6px 6px 12px black;
+}
 
 @layer base {
     .heading {
@@ -29,6 +31,9 @@
 
     .underlined-link{
         @apply underline text-primary;
+    }
+    .card-text{
+        @apply  text-white font-black text-5xl font-exo  absolute z-40 bottom-12 left-6;
     }
 
 }
